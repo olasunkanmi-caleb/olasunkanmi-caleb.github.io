@@ -2,118 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Olasunkanmi Alade Caleb — Mechanical & Product Design Engineer</title>
-  <meta name="description" content="Portfolio of Olasunkanmi Alade Caleb — Mechanical & Product Design Engineer. Additive & Subtractive Manufacturing, CNC Programming, Project Management." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Olasunkanmi (Caleb) Alade — Mechanical Design Engineer</title>
+  <meta name="description" content="Portfolio of Olasunkanmi (Caleb) Alade — Mechanical & Product Design Engineer. CAD/CAM, CNC, Mould Inspection, Manufacturing." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#10b981;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#0b66c3; --muted:#6b7280; --text:#0f1724; --glass:rgba(15,23,36,0.04);
+      --maxw:1100px;
+    }
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#071025 0%, #071226 60%);color:#e6eef8;line-height:1.5}
-    .container{max-width:980px;margin:48px auto;padding:28px}
-    .card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 6px 24px rgba(2,6,23,0.6);}
-    header{display:flex;gap:20px;align-items:center}
-    .avatar{width:94px;height:94px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:var(--accent)}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%, #f3f6fb 100%)}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:10px;background:transparent;margin-bottom:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#e6f0ff,#d7ebff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:16px;border:1px solid rgba(11,102,195,0.08)
+    }
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{font-size:14px;color:var(--muted);padding:8px;border-radius:8px}
+    .nav-links a:hover{color:var(--text);background:var(--glass)}
+    .hero{display:flex;gap:28px;align-items:center;padding:18px;background:var(--card);border-radius:12px;box-shadow:0 8px 30px rgba(11,34,78,0.06)}
+    .avatar{
+      width:120px;height:120px;border-radius:12px;flex-shrink:0;background:linear-gradient(180deg,#fff 0%, #f3f8ff 100%);display:flex;align-items:center;justify-content:center;border:1px solid rgba(11,102,195,0.06)
+    }
+    .avatar svg{width:68px;height:68px}
+    .hero-right{flex:1}
     h1{margin:0;font-size:22px}
-    h2{margin:10px 0 8px;font-size:16px;color:#fff}
-    p.lead{margin:4px 0 12px;color:var(--muted)}
-    .row{display:flex;gap:24px;margin-top:18px}
-    .col{flex:1}
+    .title{margin-top:6px;color:var(--muted);font-weight:600}
+    .meta{margin-top:12px;color:var(--muted);font-size:14px;display:flex;gap:12px;flex-wrap:wrap}
+    .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:14px;border:none;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,102,195,0.12);color:var(--accent)}
+    .content{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:20px}
+    @media(max-width:980px){.content{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,38,75,0.04)}
+    .section h2{margin:0 0 10px 0;font-size:16px}
+    p{margin:0 0 10px 0;color:#334155}
     .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
-    .section{margin-top:20px}
-    .project{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:10px}
-    a.cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#051018;text-decoration:none;font-weight:600}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    pre.cv-link{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;overflow:auto}
-    @media(max-width:720px){header{flex-direction:column;align-items:flex-start}.row{flex-direction:column}}
+    .chip{background:#f1f5f9;padding:8px 10px;border-radius:8px;color:var(--text);font-size:13px;border:1px solid rgba(15,23,36,0.03)}
+    .exp-item{margin-bottom:12px}
+    .exp-item strong{display:block}
+    .muted{color:var(--muted);font-size:13px}
+    .right-card .small{font-size:13px;color:var(--muted)}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    /* small utilities */
+    .row{display:flex;gap:12px;align-items:center}
+    a.download{display:inline-block;padding:10px 12px;border-radius:10px;background:#0b66c3;color:#fff;font-weight:700}
+    /* smooth scroll */
+    html{scroll-behavior:smooth}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <header>
-        <div class="avatar">OA</div>
+  <div class="wrap">
+    <!-- NAV -->
+    <nav>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">OA</div>
         <div>
-          <h1>Olasunkanmi Alade Caleb</h1>
-          <p class="lead">Mechanical & Product Design Engineer — Additive & Subtractive Manufacturing • CNC Programming • Technical Project Management</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="cta" href="sandbox:/mnt/data/Olasunkanmi Alade CV.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
-            <a class="cta" href="mailto:olasunkanmi.alade20@gmail.com" style="background:#0284c7;color:#fff">Email Me</a>
-          </div>
-        </div>
-      </header>
-
-      <div class="row">
-        <div class="col">
-          <div class="section">
-            <h2>About</h2>
-            <p>Accomplished Mechanical & Product Design Engineer with 7+ years' experience in mould manufacturing, CNC machining, industrial enclosures, and project leadership. Skilled in SolidWorks, Inventor, AutoCAD, CNC programming, 3D printing, and ERP systems.</p>
-          </div>
-
-          <div class="section">
-            <h2>Highlighted Projects</h2>
-            <div class="project">
-              <strong>Light Tactical Armoured Personnel Carrier (R&amp;D)</strong>
-              <p class="muted">Contributed to design research, fabrication drawings and prototype components.</p>
-            </div>
-            <div class="project">
-              <strong>Industrial Enclosure Systems</strong>
-              <p class="muted">Designed GA drawings, installation guides, BOMs and safety-compliant enclosures.</p>
-            </div>
-            <div class="project">
-              <strong>CNC-Machined Mould Components & Tooling</strong>
-              <p class="muted">Generated CNC programs and created 3D-printed prototypes to validate tooling.</p>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Experience (Summary)</h2>
-            <p><strong>Senior Mould Inspector</strong> — Zoujaj Glass (Riyadh, Saudi Arabia), 2024–Present</p>
-            <p><strong>Mechanical Design Engineer (Team Lead)</strong> — Buckler Systems (Lagos), 2023–2024</p>
-            <p><strong>Mechanical Design Engineer</strong> — Tranos Contracting, 2022–2023</p>
-            <p><strong>Mould Maintenance Technician</strong> — Beta Glass Plc, 2018–2022</p>
-          </div>
-
-        </div>
-
-        <div class="col">
-          <div class="section">
-            <h2>Core Skills</h2>
-            <div class="skills">
-              <div class="skill">SolidWorks</div>
-              <div class="skill">AutoCAD</div>
-              <div class="skill">Inventor</div>
-              <div class="skill">CNC Programming</div>
-              <div class="skill">3D Printing (FDM/SLA)</div>
-              <div class="skill">FEA</div>
-              <div class="skill">ERP Systems</div>
-              <div class="skill">BOM Management</div>
-              <div class="skill">Project Management</div>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Education & Certifications</h2>
-            <p><strong>HND, Mechanical Engineering</strong> — Yaba College of Technology (2016–2018)</p>
-            <p>Project Management Professional (AAPM) • UK HSE Levels 1–3 • Lean Six Sigma (White Belt)</p>
-          </div>
-
-          <div class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:olasunkanmi.alade20@gmail.com">olasunkanmi.alade20@gmail.com</a></p>
-            <p>Phone: +966 54 5765 637</p>
-            <p>Location: Riyadh, Saudi Arabia</p>
-            <p>GitHub: <a href="https://github.com/olasunkanmi-caleb" target="_blank" rel="noopener">github.com/olasunkanmi.caleb</a></p>
-          </div>
-
+          <div style="font-weight:800">Olasunkanmi (Caleb) Alade</div>
+          <div style="font-size:13px;color:var(--muted)">Mechanical Design Engineer — Riyadh, Saudi Arabia</div>
         </div>
       </div>
 
-      <footer>
-        <small>Built with a simple static template. To publish this as <code>https://olasunkanmi.caleb.github.io</code>, create a repository named <strong>olasunkanmi.caleb.github.io</strong> and upload this file as <code>index.html</code>.</small>
-      </footer>
+      <div class="nav-links" aria-hidden="false">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Intro">
+      <div class="avatar" title="Profile">
+        <!-- Inline SVG placeholder — replace with an actual photo (img tag) later -->
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OA">
+          <rect width="120" height="120" rx="12" fill="#eaf3ff"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="36" font-family="Inter, Arial" fill="#0b66c3" font-weight="700">OA</text>
+        </svg>
+      </div>
+
+      <div class="hero-right">
+        <h1>Olasunkanmi (Caleb) Alade</h1>
+        <div class="title">Mechanical Design Engineer — Product Design • CAD/CAM • CNC</div>
+
+        <div class="meta">
+          <div class="muted">Riyadh, Saudi Arabia</div>
+          <div class="muted">Email: <a href="mailto:olasunkanmi.alade@gmail.com">olasunkanmi.alade@gmail.com</a></div>
+          <div class="muted">Phone: +966 545 765 637</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/Olasunkanmi-Alade-CV.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
+          <a class="btn btn-ghost" href="mailto:olasunkanmi.alade@gmail.com">Email</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/olasunkanmi-alade-4554a316a" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="content" style="margin-top:18px">
+      <main>
+        <!-- ABOUT -->
+        <section id="about" class="card section" aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
+          <p><strong>Mechanical Design Engineer</strong> with <strong>14+ years</strong> experience across mechanical design, mould inspection, machining, fabrication and production support in glass manufacturing, defense engineering and industrial fabrication. Proficient in CAD modeling, CNC programming, 3D printing and reverse engineering. Strong record of reducing defects, improving processes and delivering high-precision designs.</p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="card section" aria-labelledby="experience-heading" style="margin-top:14px">
+          <h2 id="experience-heading">Professional Experience</h2>
+
+          <div class="exp-item">
+            <strong>Senior Mould Inspector — Zoujaj Glass (Riyadh, Saudi Arabia)</strong>
+            <div class="muted">2024 – Present</div>
+            <p>Design, inspect and maintain moulds for glass container production; generate CNC programs; machine high-precision components; manage mould inventory and supervise workshop operations.</p>
+          </div>
+
+          <div class="exp-item">
+            <strong>Team Lead — Mechanical Design Engineer — Buckler Land Systems (Lekki, Lagos)</strong>
+            <div class="muted">2023 – 2024</div>
+            <p>Led defence design projects, prepared fabrication drawings, BOMs and CNC cutting plans; developed prototypes using 3D printing; delivered a Light Tactical Armoured Personnel Carrier design.</p>
+          </div>
+
+          <div class="exp-item">
+            <strong>Mechanical Design Engineer — Tranos Contracting Limited (Ikeja, Lagos)</strong>
+            <div class="muted">2022 – 2023</div>
+            <p>Designed industrial enclosures and structural metalworks; produced GA/shop drawings, BOMs and installation documentation; collaborated with QA and production teams to reduce project turnaround time.</p>
+          </div>
+
+          <div class="exp-item">
+            <strong>Mould Maintenance Technician — Beta Glass Plc (Frigoglass Group)</strong>
+            <div class="muted">2008 – 2022</div>
+            <p>Prepared, repaired and maintained mould components; performed reverse engineering and 3D printing for prototype development and part replacement; executed preventive and corrective maintenance of workshop machinery.</p>
+          </div>
+        </section>
+
+        <!-- PROJECTS (optional short list) -->
+        <section id="projects" class="card section" style="margin-top:14px">
+          <h2>Highlighted Projects</h2>
+          <div style="margin-top:8px">
+            <p><strong>Light Tactical Armoured Personnel Carrier</strong> — Complete design package: GA drawings, fabrication documentation and BOMs.</p>
+            <p><strong>Industrial Enclosure Systems</strong> — Design and documentation for safety-compliant enclosures and installation guides.</p>
+            <p><strong>CNC-Machined Mould Components & Tooling</strong> — CNC programs, prototypes and tooling for production readiness.</p>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="card section" style="margin-top:14px">
+          <h2>Certifications</h2>
+          <div class="muted" style="margin-top:8px">
+            <ul style="margin:0 0 0 18px;padding:0">
+              <li>Grade Test I–III in General Fitting & Metal Machining — Federal Ministry of Labour</li>
+              <li>Project Management Professional — AAPM</li>
+              <li>UK HSE Level 1–3 — British International Safety Organization</li>
+              <li>Lean Six Sigma (White Belt)</li>
+              <li>Diploma in Project Management — CIPM</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="card section" style="margin-top:14px">
+          <h2>Education</h2>
+          <p><strong>HND, Mechanical Engineering</strong> — Yaba College of Technology (2016–2018)</p>
+          <p><strong>ND, Mechanical Engineering</strong> — Yaba College of Technology (2010–2014)</p>
+          <p>NABTEB — Federal Science and Technology College (2003–2006)</p>
+        </section>
+      </main>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="right-card" style="width:100%;max-width:360px">
+        <div class="card" style="margin-bottom:14px">
+          <h3 style="margin:0 0 10px 0">Core Competencies</h3>
+          <div class="skills">
+            <div class="chip">Mechanical Design Engineering</div>
+            <div class="chip">CAD/CAM/CNC</div>
+            <div class="chip">Reverse Engineering</div>
+            <div class="chip">Mould Design & Maintenance</div>
+            <div class="chip">Conventional Machining</div>
+            <div class="chip">BOM & PBOM Development</div>
+            <div class="chip">Project Planning</div>
+            <div class="chip">Process Optimization</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:14px">
+          <h3 style="margin:0 0 10px 0">Technical Skills</h3>
+          <div class="small muted">
+            AutoCAD · SolidWorks · Inventor · Solid Edge · Advance Steel · BricsCAD<br/>
+            CNC Programming · Lathe & Milling · 3D Printing · ERP / PDM
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px 0">Contact</h3>
+          <div class="contact-list small">
+            <div><strong>Email:</strong> <a href="mailto:olasunkanmi.alade@gmail.com">olasunkanmi.alade@gmail.com</a></div>
+            <div><strong>Phone:</strong> +966 545 765 637</div>
+            <div><strong>Location:</strong> Riyadh, Saudi Arabia</div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/olasunkanmi-alade-4554a316a" target="_blank" rel="noopener">linkedin.com/in/olasunkanmi-alade-4554a316a</a></div>
+          </div>
+        </div>
+      </aside>
     </div>
+
+    <footer>
+      <div class="muted">© <span id="year"></span> Olasunkanmi (Caleb) Alade — Mechanical Design Engineer</div>
+    </footer>
   </div>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-<!-- rebuild -->
+
