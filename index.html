@@ -11,7 +11,7 @@
       --maxw:1100px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%, #f3f6fb 100%)}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:linear-gradient(180deg,#f8fbff 0%, #f3f6fb 100%);}
     a{color:var(--accent);text-decoration:none}
     .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
     nav{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:10px;background:transparent;margin-bottom:18px}
@@ -31,10 +31,16 @@
     h1{margin:0;font-size:22px}
     .title{margin-top:6px;color:var(--muted);font-weight:600}
     .meta{margin-top:12px;color:var(--muted);font-size:14px;display:flex;gap:12px;flex-wrap:wrap}
-    .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;font-size:14px;border:none;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-ghost{background:transparent;border:1px solid rgba(11,102,195,0.12);color:var(--accent)}
+    .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;flex-wrap:wrap;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:600;font-size:14px;border:none;cursor:pointer;text-decoration:none;gap:6px;transition:transform 0.2s;}
+    .btn-primary{background:var(--accent);color:#fff;}
+    .btn-primary:hover{animation:bounce 0.3s;background:#084a8c;}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,102,195,0.12);color:var(--accent);}
+    .btn-ghost:hover{animation:bounce 0.3s;background:rgba(11,102,195,0.1);}
+    .btn svg{width:16px;height:16px;fill:white;transition:transform 0.3s;}
+    .btn-primary:hover svg{transform:translateY(-4px);}
+    .btn-ghost svg{fill:var(--accent);}
+    @keyframes bounce {0%{transform:translateY(0);}30%{transform:translateY(-4px);}60%{transform:translateY(-2px);}100%{transform:translateY(0);}}
     .content{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:20px}
     @media(max-width:980px){.content{grid-template-columns:1fr}}
     .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,38,75,0.04)}
@@ -48,10 +54,6 @@
     .right-card .small{font-size:13px;color:var(--muted)}
     footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
     .contact-list{display:flex;flex-direction:column;gap:8px}
-    /* small utilities */
-    .row{display:flex;gap:12px;align-items:center}
-    a.download{display:inline-block;padding:10px 12px;border-radius:10px;background:#0b66c3;color:#fff;font-weight:700}
-    /* smooth scroll */
     html{scroll-behavior:smooth}
   </style>
 </head>
@@ -95,15 +97,27 @@
           <div class="muted">Phone: +966 545 765 637</div>
         </div>
 
+        <!-- NEW DOWNLOAD BUTTONS -->
         <div class="cta-row">
-          <a class="btn btn-primary" href="/Olasunkanmi-Alade-CV.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
+          <a class="btn btn-primary" href="assets/Olasunkanmi-Alade-CV.pdf" download>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM15 9V3.5L20.5 9H15zm-3 7h2v-5h-2v5zm-4 0h2v-5H8v5zm8 0h2v-5h-2v5z"/>
+            </svg>
+            Download Résumé
+          </a>
+          <a class="btn btn-primary" href="assets/Olasunkanmi-Alade-Portfolio.pdf" download>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM15 9V3.5L20.5 9H15zm-3 7h2v-5h-2v5zm-4 0h2v-5H8v5zm8 0h2v-5h-2v5z"/>
+            </svg>
+            Download Portfolio
+          </a>
           <a class="btn btn-ghost" href="mailto:olasunkanmi.alade20@gmail.com">Email</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/olasunkanmi-alade-4554a316a" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT (unchanged) -->
     <div class="content" style="margin-top:18px">
       <main>
         <!-- ABOUT -->
@@ -141,7 +155,7 @@
           </div>
         </section>
 
-        <!-- PROJECTS (optional short list) -->
+        <!-- PROJECTS -->
         <section id="projects" class="card section" style="margin-top:14px">
           <h2>Highlighted Projects</h2>
           <div style="margin-top:8px">
@@ -216,9 +230,7 @@
   </div>
 
   <script>
-    // set current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
